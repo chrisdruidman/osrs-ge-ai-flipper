@@ -58,7 +58,7 @@ This application analyzes real-time OSRS market data to:
 1. **Clone the repository**
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/chrisdruidman/osrs-ge-ai-flipper.git
     cd osrs-ge-ai-flipper
     ```
 
