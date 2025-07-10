@@ -19,6 +19,7 @@
 -   ✅ Security considerations documented (JWT, bcrypt)
 -   ✅ Performance requirements aligned with user's approach (10-min caching)
 -   ✅ Package management guidelines added (latest versions, compatibility checks)
+-   ✅ Mandatory git workflow added (commit frequently, always push changes)
 
 ### Documentation
 

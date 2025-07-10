@@ -116,6 +116,14 @@ osrs-ge-ai-flipper/
 -   Modern React patterns with hooks and context
 -   Production-ready deployment considerations
 
+### Git Workflow - MANDATORY
+
+-   **Commit frequently**: After every meaningful chunk of work (feature, fix, refactor)
+-   **Descriptive commit messages**: Use clear, descriptive commit messages explaining what was done
+-   **Always push**: After committing, immediately push changes to remote repository
+-   **Commands**: Use `git add -A && git commit -m "Your descriptive message" && git push`
+-   **Never leave work uncommitted**: All progress must be preserved in git history
+
 ### Package Management
 
 -   **Always use latest stable versions**: Install packages with `@latest` tag
@@ -126,14 +134,17 @@ osrs-ge-ai-flipper/
 
 ## Agent Handover Protocol
 
-When completing development phases, update HANDOVER_SUMMARY.md with:
+When completing development phases:
 
-1. **Completed Features**: Implemented functionality
-2. **Current State**: Working features and test status
-3. **Next Steps**: Priority tasks for next agent
-4. **Known Issues**: Bugs or technical debt
-5. **Environment Notes**: Setup requirements
-6. **Testing Status**: Coverage and test results
+1. **Commit and push all work**: Ensure all changes are in git history
+2. **Update HANDOVER_SUMMARY.md** with:
+    - **Completed Features**: Implemented functionality
+    - **Current State**: Working features and test status
+    - **Next Steps**: Priority tasks for next agent
+    - **Known Issues**: Bugs or technical debt
+    - **Environment Notes**: Setup requirements
+    - **Testing Status**: Coverage and test results
+3. **Final commit**: Commit the updated handover summary and push to remote
 
 ## OSRS Domain Knowledge
 
