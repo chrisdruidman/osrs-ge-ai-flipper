@@ -1,0 +1,229 @@
+# OSRS Grand Exchange AI Flipper - Git Ignore Rules
+
+# Environment Configuration
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.conda/
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Node.js / React
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output
+
+# ESLint cache
+.eslintcache
+
+# Parcel cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Database
+*.db
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# Machine Learning Models
+models/
+*.pkl
+*.joblib
+*.h5
+*.model
+*.weights
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# Data files
+data/
+*.csv
+*.json.bak
+*.parquet
+*.feather
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+.temp/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor backups
+*~
+*.swp
+*.swo
+.#*
+#*#
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+.hypothesis/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Celery beat schedule file
+celerybeat-schedule
+celerybeat.pid
+
+# Redis dump file
+dump.rdb
+
+# PostgreSQL
+*.sql
+*.backup
+
+# Application specific
+uploads/
+downloads/
+cache/
+static/media/
+media/
+
+# Monitoring and metrics
+metrics/
+monitoring/
+
+# Backup files
+*.bak
+*.backup
+*~
+*.orig
+
+# Documentation build
+docs/_build/
+site/
+
+# Distribution / packaging
+.Python
+*.egg-info/
+dist/
+build/
+
+# Security
+*.pem
+*.key
+*.crt
+*.p12
+*.p8
+*.jks
+
+# Local development overrides
+docker-compose.local.yml
+local_settings.py
+.local/ 

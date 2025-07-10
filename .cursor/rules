@@ -1,0 +1,158 @@
+# OSRS Grand Exchange AI Flipper - Development Rules
+
+## Project Overview
+
+This project analyzes Old School RuneScape market data to identify profitable items to flip on the Grand Exchange, provides buy/sell price recommendations using AI agent APIs, and tracks trade performance.
+
+## Technology Stack
+
+### Backend
+
+-   **Runtime**: Node.js with ES6 modules
+-   **Framework**: Fastify (high performance, production-ready)
+-   **Database**: SQLite (simple, effective for market data)
+-   **Authentication**: JWT with refresh tokens, bcrypt password hashing
+
+### Frontend
+
+-   **Framework**: React 18
+-   **Build Tool**: Vite (fast development and building)
+-   **Styling**: Tailwind CSS (modern, responsive design)
+-   **State Management**: React hooks and context
+
+### AI Integration
+
+-   **Primary**: Anthropic Claude 3.5 Sonnet
+-   **Fallback**: OpenAI GPT-4 with graceful degradation
+-   **Approach**: Agent APIs for market analysis (not machine learning)
+
+### Development
+
+-   **Package Manager**: npm
+-   **Environment**: Local development setup
+-   **Performance**: Comprehensive API caching (10-minute cache)
+-   **Architecture**: Service-oriented design pattern
+
+## AI Strategy
+
+-   **Agent Model APIs**: Use AI model APIs (GPT, Claude, etc.) for market analysis and insights
+-   **NO Machine Learning**: This project uses agent APIs, not traditional ML models
+-   **Market Analysis**: AI agents analyze price patterns, volume, and market conditions
+-   **Trade Recommendations**: AI-powered buy/sell price suggestions
+
+## Data Sources
+
+-   **Primary API**: OSRS Wiki Real-time API (https://prices.runescape.wiki/api/v1/osrs/)
+-   **Fallback**: RuneLite Grand Exchange API (if needed)
+-   **Real-time Price Data**: Live market prices and volume data
+-   **Historical Data**: Price history for trend analysis
+
+## Project Structure
+
+```
+osrs-ge-ai-flipper/
+├── backend/
+│   ├── src/
+│   │   ├── services/           # Business logic services
+│   │   │   ├── OSRSWikiService.js
+│   │   │   ├── ContextBuilder.js
+│   │   │   └── DataServiceFactory.js
+│   │   ├── routes/             # API endpoints
+│   │   │   ├── items.js
+│   │   │   ├── analysis.js
+│   │   │   ├── auth.js
+│   │   │   └── market.js
+│   │   ├── middleware/         # Authentication, validation
+│   │   ├── models/             # Database models
+│   │   └── utils/              # Helper functions
+│   ├── database/               # SQLite database files
+│   ├── package.json
+│   └── server.js               # Fastify server entry point
+├── frontend/
+│   ├── src/
+│   │   ├── components/         # React components
+│   │   ├── pages/              # Page components
+│   │   ├── hooks/              # Custom React hooks
+│   │   ├── context/            # React context providers
+│   │   ├── services/           # API client functions
+│   │   └── utils/              # Frontend utilities
+│   ├── public/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── index.html
+├── package.json                # Root package.json for scripts
+├── .env.example               # Environment variables template
+└── README.md
+```
+
+## Development Guidelines
+
+### Core Principles
+
+-   Focus on agent API integration over traditional ML
+-   Prioritize real-time market data processing with comprehensive caching
+-   Implement trade tracking and performance monitoring
+-   Ensure OSRS Grand Exchange compliance and ethics
+
+### Coding Standards
+
+-   **JavaScript**: Use ES6+ modules, async/await, destructuring
+-   **API Design**: RESTful endpoints with consistent response formats
+-   **Error Handling**: Graceful degradation with proper error responses
+-   **Caching**: 10-minute cache on suitable endpoints to optimize performance
+-   **Authentication**: JWT-based with refresh tokens, secure password hashing
+
+### Performance Requirements
+
+-   API response time < 500ms for cached endpoints
+-   Comprehensive caching to prevent wasteful AI API calls
+-   Mobile-responsive frontend design
+-   Graceful AI provider fallback (Claude → OpenAI)
+
+### Development Workflow
+
+-   Service-oriented architecture with clear separation of concerns
+-   Real-time search with debouncing and autocomplete
+-   Modern React patterns with hooks and context
+-   Production-ready deployment considerations
+
+### Package Management
+
+-   **Always use latest stable versions**: Install packages with `@latest` tag
+-   **Version compatibility**: Verify package compatibility with existing dependencies
+-   **Breaking changes**: Check for major version differences (e.g., Fastify v4 vs v5)
+-   **Security updates**: Keep dependencies current for latest security patches
+-   **Documentation**: Reference current package docs, not outdated tutorials
+
+## Agent Handover Protocol
+
+When completing development phases, update HANDOVER_SUMMARY.md with:
+
+1. **Completed Features**: Implemented functionality
+2. **Current State**: Working features and test status
+3. **Next Steps**: Priority tasks for next agent
+4. **Known Issues**: Bugs or technical debt
+5. **Environment Notes**: Setup requirements
+6. **Testing Status**: Coverage and test results
+
+## OSRS Domain Knowledge
+
+-   **GP**: Gold Pieces (in-game currency)
+-   **GE**: Grand Exchange (central marketplace)
+-   **Flip**: Buy low, sell high for profit
+-   **Margin**: Difference between buy and sell prices
+-   **Volume**: Trading activity level
+-   **Buy Limits**: 4-hour purchase restrictions per item
+-   **Market Timing**: Optimal buy/sell windows
+
+## Ethics & Compliance
+
+-   Read-only market data APIs only
+-   No OSRS account access required
+-   Complies with Jagex terms of service
+-   Player responsibility for all trades
+-   Educational/informational purposes
+
+---
+
+**Status**: Technology stack and guidelines established based on user's existing OSRS portfolio project approach.
